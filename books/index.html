@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>投資の教科書 -- 全10巻シリーズ</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --bg: #fafafa; --bg2: #ffffff; --text: #1a1a2e; --text2: #555; --border: #e0e0e0; }
+  [data-theme="dark"] { --bg: #0f172a; --bg2: #1e293b; --text: #e2e8f0; --text2: #94a3b8; --border: #334155; }
+  body { font-family: "Noto Sans JP","Yu Gothic",sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+  a { text-decoration: none; color: inherit; }
+
+  .hero {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #0891b2 100%);
+    color: #fff; text-align: center; padding: 5rem 2rem 4rem;
+  }
+  .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .hero p { font-size: 1.15rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+  .hero .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; margin-bottom: 1rem; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+  .section-title { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 2rem; color: var(--text); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .card {
+    background: var(--bg2); border-radius: 14px; overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid var(--border);
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+  .card-header { padding: 1.2rem 1.5rem; color: #fff; }
+  .card-header .vol-num { font-size: 0.8rem; font-weight: 600; opacity: 0.85; }
+  .card-header h3 { font-size: 1.2rem; font-weight: 700; margin-top: 0.2rem; }
+  .card-body { padding: 1rem 1.5rem 1.2rem; }
+  .card-body p { font-size: 0.9rem; color: var(--text2); margin-bottom: 0.8rem; }
+  .card-chapters { font-size: 0.82rem; color: var(--text2); }
+  .card-chapters span { display: inline-block; background: var(--bg); padding: 0.15rem 0.5rem; border-radius: 4px; margin: 0.15rem 0.1rem; border: 1px solid var(--border); }
+  .card-link { display: block; padding: 0.8rem 1.5rem; text-align: center; font-weight: 600; font-size: 0.9rem; border-top: 1px solid var(--border); transition: background 0.2s; }
+  .card-link:hover { background: var(--bg); }
+
+  .appendix-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .app-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; text-align: center; transition: transform 0.2s; }
+  .app-card:hover { transform: translateY(-2px); }
+  .app-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .app-card h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+  .app-card p { font-size: 0.82rem; color: var(--text2); }
+
+  .disclaimer {
+    max-width: 800px; margin: 2rem auto; padding: 1.5rem; background: var(--bg2);
+    border: 1px solid var(--border); border-radius: 10px; font-size: 0.85rem; color: var(--text2);
+  }
+  .disclaimer h4 { color: #dc2626; margin-bottom: 0.5rem; }
+
+  footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: var(--text2); }
+
+  .theme-btn { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg2); font-size: 1.3rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 100; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 1.8rem; }
+    .hero { padding: 3rem 1rem 2.5rem; }
+    .container { padding: 2rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">全10巻 + 付録4編</div>
+  <h1>投資の教科書</h1>
+  <p>初心者から中級者まで、投資に必要な知識を体系的に学べるシリーズ。日本の制度にも完全対応。</p>
+</div>
+
+<div class="container">
+  <h2 class="section-title">シリーズ一覧</h2>
+  <div class="grid">
+
+    <a href="vol01/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1e3a5f,#2563eb)">
+        <div class="vol-num">第1巻</div>
+        <h3>投資の基礎</h3>
+      </div>
+      <div class="card-body">
+        <p>投資とは何か、金融資産の種類、市場の仕組みを基礎から学ぶ</p>
+        <div class="card-chapters"><span>第1章 投資とは</span><span>第2章 金融資産</span><span>第3章 市場の仕組み</span></div>
+      </div>
+      <div class="card-link" style="color:#2563eb">読む →</div>
+    </a>
+
+    <a href="vol02/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#9b2335,#dc2626)">
+        <div class="vol-num">第2巻</div>
+        <h3>日本の投資制度</h3>
+      </div>
+      <div class="card-body">
+        <p>新NISA・iDeCo・税制を完全解説。税制優遇を最大活用する</p>
+        <div class="card-chapters"><span>第4章 新NISA</span><span>第5章 iDeCo</span><span>第6章 税金</span><span>第7章 証券会社</span></div>
+      </div>
+      <div class="card-link" style="color:#dc2626">読む →</div>
+    </a>
+
+    <a href="vol03/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#1a6b3c,#16a34a)">
+        <div class="vol-num">第3巻</div>
+        <h3>ファンダメンタル分析</h3>
+      </div>
+      <div class="card-body">
+        <p>財務諸表の読み方、投資指標、企業価値評価の手法を習得</p>
+        <div class="card-chapters"><span>第8章 財務諸表</span><span>第9章 投資指標</span><span>第10章 バリュエーション</span></div>
+      </div>
+      <div class="card-link" style="color:#16a34a">読む →</div>
+    </a>
+
+    <a href="vol04/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#5b2c83,#7c3aed)">
+        <div class="vol-num">第4巻</div>
+        <h3>テクニカル分析</h3>
+      </div>
+      <div class="card-body">
+        <p>ローソク足・チャートパターン・テクニカル指標で市場心理を読む</p>
+        <div class="card-chapters"><span>第11章 基礎</span><span>第12章 テクニカル指標</span></div>
+      </div>
+      <div class="card-link" style="color:#7c3aed">読む →</div>
+    </a>
+
+    <a href="vol05/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#8b6914,#ca8a04)">
+        <div class="vol-num">第5巻</div>
+        <h3>ポートフォリオ理論とリスク管理</h3>
+      </div>
+      <div class="card-body">
+        <p>現代ポートフォリオ理論・CAPM・リスク指標・ファクター投資</p>
+        <div class="card-chapters"><span>第13章 リスクとリターン</span><span>第14章 MPT</span><span>第15章 評価指標</span><span>第16章 リスク管理</span></div>
+      </div>
+      <div class="card-link" style="color:#ca8a04">読む →</div>
+    </a>
+
+    <a href="vol06/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#c2410c,#ea580c)">
+        <div class="vol-num">第6巻</div>
+        <h3>投資戦略</h3>
+      </div>
+      <div class="card-body">
+        <p>インデックス・バリュー・グロース・配当投資とアセットアロケーション</p>
+        <div class="card-chapters"><span>第17章 インデックス</span><span>第18章 バリュー</span><span>第19章 グロース</span><span>第20章 配当</span><span>第21章 資産配分</span></div>
+      </div>
+      <div class="card-link" style="color:#ea580c">読む →</div>
+    </a>
+
+    <a href="vol07/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#0d7377,#0891b2)">
+        <div class="vol-num">第7巻</div>
+        <h3>行動ファイナンス</h3>
+      </div>
+      <div class="card-body">
+        <p>認知バイアス・プロスペクト理論・投資家心理の落とし穴と対策</p>
+        <div class="card-chapters"><span>第22章 行動ファイナンスとは</span><span>第23章 認知バイアス</span><span>第24章 市場心理とバブル</span></div>
+      </div>
+      <div class="card-link" style="color:#0891b2">読む →</div>
+    </a>
+
+    <a href="vol08/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#4a5568,#64748b)">
+        <div class="vol-num">第8巻</div>
+        <h3>経済と市場の読み方</h3>
+      </div>
+      <div class="card-body">
+        <p>経済指標・金融政策・セクターローテーション・為替と国際投資</p>
+        <div class="card-chapters"><span>第25章 マクロ経済</span><span>第26章 金融政策</span><span>第27章 景気循環</span><span>第28章 為替</span></div>
+      </div>
+      <div class="card-link" style="color:#64748b">読む →</div>
+    </a>
+
+    <a href="vol09/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#0369a1,#0ea5e9)">
+        <div class="vol-num">第9巻</div>
+        <h3>実践的投資ガイド</h3>
+      </div>
+      <div class="card-body">
+        <p>投資の始め方、コスト理解、ETF vs 投信、ライフステージ別戦略</p>
+        <div class="card-chapters"><span>第29章 準備</span><span>第30章 開始手順</span><span>第31章 コスト</span><span>第32章 ETF vs 投信</span><span>第33章 ライフステージ別</span></div>
+      </div>
+      <div class="card-link" style="color:#0ea5e9">読む →</div>
+    </a>
+
+    <a href="vol10/index.html" class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,#18181b,#3f3f46)">
+        <div class="vol-num">第10巻</div>
+        <h3>名著に学ぶ投資哲学と上級トピック</h3>
+      </div>
+      <div class="card-body">
+        <p>投資名著8冊のエッセンス、オプション・信用取引・ESG投資</p>
+        <div class="card-chapters"><span>第34章 名著ガイド</span><span>第35章 デリバティブ</span><span>第36章 レバレッジ</span><span>第37章 オルタナティブ</span><span>第38章 総まとめ</span></div>
+      </div>
+      <div class="card-link" style="color:#3f3f46">読む →</div>
+    </a>
+
+  </div>
+
+  <h2 class="section-title" style="margin-top:3rem">付録</h2>
+  <div class="appendix-grid">
+    <a href="appendix/formulas.html" class="app-card">
+      <div class="icon">📐</div>
+      <h4>付録A: 重要公式集</h4>
+      <p>複利計算、CAPM、DCFなど15+の公式</p>
+    </a>
+    <a href="appendix/calendar.html" class="app-card">
+      <div class="icon">📅</div>
+      <h4>付録B: 経済カレンダー</h4>
+      <p>日銀会合、FOMC、決算シーズンなど</p>
+    </a>
+    <a href="appendix/glossary.html" class="app-card">
+      <div class="icon">📖</div>
+      <h4>付録C: 用語集</h4>
+      <p>日英対照 約200語の投資用語</p>
+    </a>
+    <a href="appendix/checklists.html" class="app-card">
+      <div class="icon">✅</div>
+      <h4>付録D: チェックリスト</h4>
+      <p>口座開設、銘柄分析、年末タスク</p>
+    </a>
+  </div>
+
+  <div class="disclaimer">
+    <h4>免責事項</h4>
+    <p>本シリーズは投資に関する教育・情報提供を目的としており、特定の金融商品の購入・売却を推奨するものではありません。投資判断は自己責任で行ってください。記載されている情報は作成時点のものであり、制度改正等により変更される場合があります。実際の投資にあたっては、最新の情報を確認し、必要に応じて金融の専門家にご相談ください。</p>
+  </div>
+</div>
+
+<footer>投資の教科書 &copy; 2025 -- 教育目的の非商用コンテンツ</footer>
+
+<button class="theme-btn" onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')">🌓</button>
+</body>
+</html>

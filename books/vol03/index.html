@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第3巻: ファンダメンタル分析 -- 投資の教科書</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>:root { --vol-color: #1a6b3c; }</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="sidebar">
+  <div class="sidebar-header"><div class="vol-badge">第3巻</div><br>ファンダメンタル分析</div>
+  <ul class="sidebar-nav">
+    <li class="chapter"><a href="#ch8">第8章: 財務諸表の読み方</a></li>
+    <li><a href="#sec8-1">8-1. 貸借対照表(B/S)</a></li>
+    <li><a href="#sec8-2">8-2. 損益計算書(P/L)</a></li>
+    <li><a href="#sec8-3">8-3. キャッシュフロー計算書</a></li>
+    <li><a href="#sec8-4">8-4. 粉飾決算の見抜き方</a></li>
+    <li class="chapter"><a href="#ch9">第9章: 株式の投資指標</a></li>
+    <li><a href="#sec9-1">9-1. バリュエーション指標</a></li>
+    <li><a href="#sec9-2">9-2. 収益性指標</a></li>
+    <li><a href="#sec9-3">9-3. 配当関連指標</a></li>
+    <li><a href="#sec9-4">9-4. その他の指標</a></li>
+    <li class="chapter"><a href="#ch10">第10章: バリュエーション手法</a></li>
+    <li><a href="#sec10-1">10-1. DCF法</a></li>
+    <li><a href="#sec10-2">10-2. 類似企業比較法</a></li>
+    <li><a href="#sec10-3">10-3. 配当割引モデル</a></li>
+    <li><a href="#sec10-4">10-4. グレアムの安全域</a></li>
+  </ul>
+</nav>
+<div class="main-content">
+<header class="top-header">
+  <button class="btn-icon menu-toggle" onclick="toggleSidebar()">☰</button>
+  <span class="vol-title">第3巻: ファンダメンタル分析</span>
+  <div class="header-actions">
+    <button class="btn-icon" onclick="changeFontSize(-1)">A-</button>
+    <button class="btn-icon" onclick="changeFontSize(1)">A+</button>
+    <button class="btn-icon" onclick="toggleTheme()">🌓</button>
+  </div>
+</header>
+<div class="chapter-progress"><div class="bar"></div></div>
+<div class="content-area">
+
+<h1 id="ch8">第8章: 財務諸表の読み方</h1>
+
+<p>企業の真の価値を見極めるためには、財務諸表を正しく読み解く力が不可欠です。上場企業は四半期ごとに財務諸表を公開しており、これらは企業の「健康診断書」とも言えます。財務諸表は主に3つの書類で構成されています。</p>
+
+<h2 id="sec8-1">8-1. 貸借対照表（B/S: Balance Sheet）</h2>
+
+<p>貸借対照表は、ある時点での企業の財政状態を表します。左側（借方）に「資産」、右側（貸方）に「負債」と「純資産」が記載され、<strong>資産 = 負債 + 純資産</strong>という等式が常に成り立ちます。</p>
+
+<div class="key-point">
+  <div class="kp-label">B/Sの基本構造</div>
+  <strong>資産</strong>（会社が持っているもの）= <strong>負債</strong>（他人のお金）+ <strong>純資産</strong>（自分のお金）
+</div>
+
+<p><strong>流動資産</strong>（1年以内に現金化できるもの：現金、売掛金、棚卸資産等）と<strong>固定資産</strong>（長期間使用するもの：土地、建物、設備等）に大別されます。負債も同様に<strong>流動負債</strong>（1年以内に返済が必要：買掛金、短期借入金等）と<strong>固定負債</strong>（返済期限が1年超：長期借入金、社債等）に分かれます。</p>
+
+<h3>チェックポイント</h3>
+<div class="table-wrap">
+<table>
+  <tr><th>指標</th><th>計算式</th><th>目安</th><th>意味</th></tr>
+  <tr><td>自己資本比率</td><td>純資産 ÷ 総資産 × 100</td><td><strong>40%以上</strong>が安全</td><td>総資産のうち自己資本の割合。高いほど財務安定</td></tr>
+  <tr><td>流動比率</td><td>流動資産 ÷ 流動負債 × 100</td><td><strong>200%以上</strong>が理想</td><td>短期的な支払能力を示す</td></tr>
+  <tr><td>有利子負債比率</td><td>有利子負債 ÷ 自己資本 × 100</td><td><strong>100%以下</strong></td><td>借金への依存度</td></tr>
+</table>
+</div>
+
+<h2 id="sec8-2">8-2. 損益計算書（P/L: Profit and Loss Statement）</h2>
+
+<p>損益計算書は、一定期間（通常1年間または四半期）の企業の収益と費用、そして利益を示します。日本の損益計算書は5段階の利益で構成されています。</p>
+
+<div class="formula">
+売上高<br>
+− 売上原価 = <strong>売上総利益（粗利）</strong><br>
+− 販売費及び一般管理費 = <strong>営業利益</strong><br>
+± 営業外収益/費用 = <strong>経常利益</strong><br>
+± 特別利益/損失 = <strong>税引前当期純利益</strong><br>
+− 法人税等 = <strong>当期純利益</strong>
+</div>
+
+<p><strong>営業利益</strong>は本業での稼ぐ力を示す最重要指標です。営業利益率が<strong>10%以上</strong>であれば優良企業とされます（業種により異なります）。日本企業では<strong>経常利益</strong>を重視する文化がありますが、これには金融収支（受取利息や支払利息）が含まれるため、本業の実力を見るには営業利益が適切です。</p>
+
+<div class="box box-info">
+  <div class="box-title">利益率の業種別目安</div>
+  <p>製造業: 営業利益率8〜12%、IT・ソフトウェア: 15〜25%、小売業: 3〜5%、不動産: 10〜20%。同業他社との比較が重要です。</p>
+</div>
+
+<h2 id="sec8-3">8-3. キャッシュフロー計算書（C/F: Cash Flow Statement）</h2>
+
+<p>「利益が出ていても倒産する」ことがあります（黒字倒産）。利益は会計上の数字であり、実際のお金の動きを示すのがキャッシュフロー計算書です。3つのセクションで構成されます。</p>
+
+<ul>
+  <li><strong>営業キャッシュフロー</strong>: 本業から生み出す現金。<strong>プラスが絶対条件</strong></li>
+  <li><strong>投資キャッシュフロー</strong>: 設備投資や有価証券売買。成長企業では通常<strong>マイナス</strong>（投資している証拠）</li>
+  <li><strong>財務キャッシュフロー</strong>: 借入・返済、配当金支払い。借入でプラス、返済でマイナス</li>
+</ul>
+
+<div class="key-point">
+  <div class="kp-label">最重要指標</div>
+  <strong>フリーキャッシュフロー（FCF）</strong>= 営業CF − 設備投資<br>
+  FCFは企業が自由に使える現金であり、ウォーレン・バフェットが最も重視する指標の一つです。FCFが安定的にプラスの企業は、配当の原資があり、財務の健全性も高いと判断できます。
+</div>
+
+<h2 id="sec8-4">8-4. 3表の相互関係と粉飾決算の見抜き方</h2>
+
+<p>3つの財務諸表は密接に関連しています。P/Lの当期純利益はB/Sの利益剰余金に加算され、C/Fの期末残高はB/Sの現金及び預金と一致します。この相互チェックにより、整合性のない数字＝粉飾の兆候を発見できます。</p>
+
+<div class="box box-danger">
+  <div class="box-title">粉飾決算の危険信号</div>
+  <ul>
+    <li>営業利益は増加しているのに、営業CFが減少またはマイナス → 利益の質が低い</li>
+    <li>売掛金の急増（売上に対する比率が異常に高い）→ 架空売上の可能性</li>
+    <li>棚卸資産の急増 → 在庫の過大評価（評価損を計上していない）</li>
+    <li>特別利益の頻発 → 資産売却で一時的に利益をかさ上げ</li>
+  </ul>
+</div>
+
+<h1 id="ch9">第9章: 株式の投資指標</h1>
+
+<h2 id="sec9-1">9-1. バリュエーション指標</h2>
+
+<h3>PER（株価収益率）</h3>
+<div class="formula">PER = 株価 ÷ EPS（1株当たり純利益）</div>
+<p>PERは「投資した金額を何年で回収できるか」を示す指標です。PERが15倍なら、現在の利益水準が続けば15年で投資額を回収できる計算です。日本株の平均PERは<strong>12〜16倍</strong>、米国株は<strong>18〜22倍</strong>が目安です。同業他社や過去の水準と比較して割高か割安かを判断します。</p>
+
+<h3>PBR（株価純資産倍率）</h3>
+<div class="formula">PBR = 株価 ÷ BPS（1株当たり純資産）</div>
+<p>PBRが1倍未満ということは、株価が企業の解散価値を下回っている状態です。2023年、東証はPBR1倍割れの企業に対して「資本コストや株価を意識した経営」を要請しました。これを受け、多くの企業が自社株買いや増配などの株主還元策を打ち出しています。</p>
+
+<div class="key-point">
+  <div class="kp-label">PERとPBRの関係</div>
+  <strong>PBR = ROE × PER</strong><br>
+  この関係式から、PBRが低い（割安な）企業は、ROEが低いかPERが低い（市場の評価が低い）か、その両方であることがわかります。
+</div>
+
+<h2 id="sec9-2">9-2. 収益性指標</h2>
+
+<h3>ROE（自己資本利益率）</h3>
+<div class="formula">ROE = 当期純利益 ÷ 自己資本 × 100</div>
+<p>2014年の伊藤レポート（経産省）は、日本企業のROE目標を<strong>8%以上</strong>とすべきと提言しました。米国企業の平均ROEが15〜20%であるのに対し、日本企業は5〜10%程度にとどまっており、資本効率の改善が課題です。</p>
+
+<h3>デュポン分解</h3>
+<div class="formula">
+ROE = 純利益率 × 総資産回転率 × 財務レバレッジ<br>
+<small>= (純利益/売上) × (売上/総資産) × (総資産/自己資本)</small>
+</div>
+<p>ROEを3つの要素に分解することで、ROEの改善がどこから来ているかを分析できます。レバレッジ（借金）を増やしてROEを高めている場合はリスクが伴うため注意が必要です。</p>
+
+<h2 id="sec9-3">9-3. 配当関連指標</h2>
+
+<div class="table-wrap">
+<table>
+  <tr><th>指標</th><th>計算式</th><th>目安</th></tr>
+  <tr><td>配当利回り</td><td>年間配当金 ÷ 株価 × 100</td><td>日本株平均約2%、<strong>3%以上</strong>で高配当</td></tr>
+  <tr><td>配当性向</td><td>配当金 ÷ 当期純利益 × 100</td><td>日本企業平均<strong>30〜35%</strong></td></tr>
+  <tr><td>連続増配年数</td><td>連続で増配した年数</td><td>10年以上で安定配当企業</td></tr>
+</table>
+</div>
+
+<div class="box box-info">
+  <div class="box-title">配当権利日（日本株）</div>
+  <p>配当を受け取るには<strong>権利付最終日</strong>（権利確定日の2営業日前）までに株式を保有している必要があります。日本では3月と9月が権利確定月の企業が多く、権利付最終日前後は株価が変動しやすくなります。</p>
+</div>
+
+<h2 id="sec9-4">9-4. その他の指標</h2>
+
+<ul>
+  <li><strong>EV/EBITDA</strong>: 企業価値(EV) ÷ EBITDA。国際比較に有用。8〜12倍が目安</li>
+  <li><strong>PSR（株価売上高倍率）</strong>: 赤字企業の評価に使用。SaaS企業では10〜20倍も</li>
+  <li><strong>PEGレシオ</strong>: PER ÷ EPS成長率。<strong>1以下が割安</strong>の目安。ピーター・リンチが重視</li>
+</ul>
+
+<h1 id="ch10">第10章: バリュエーション手法</h1>
+
+<h2 id="sec10-1">10-1. DCF法（割引キャッシュフロー法）</h2>
+
+<p>DCF法は企業価値評価の最も理論的な手法です。企業の価値は、将来生み出すフリーキャッシュフロー（FCF）の現在価値の合計として定義されます。</p>
+
+<div class="formula">
+企業価値 = Σ FCF<sub>t</sub> / (1+WACC)<sup>t</sup> + ターミナルバリュー / (1+WACC)<sup>n</sup><br><br>
+WACC = E/(E+D) × R<sub>e</sub> + D/(E+D) × R<sub>d</sub> × (1−T)<br>
+<small>E=株式時価総額, D=有利子負債, Re=株主資本コスト, Rd=負債コスト, T=実効税率</small><br><br>
+R<sub>e</sub> = R<sub>f</sub> + β × (R<sub>m</sub> − R<sub>f</sub>)　（CAPM）
+</div>
+
+<p>DCF法の手順: ①将来5〜10年のFCFを予測 → ②ターミナルバリュー（永久成長モデル）を算出 → ③WACCで割引 → ④企業価値を算出 → ⑤有利子負債を差し引いて株主価値 → ⑥発行済株式数で割って理論株価。感度分析（WACCや成長率を変えた場合のシナリオ分析）が不可欠です。</p>
+
+<h2 id="sec10-2">10-2. 類似企業比較法</h2>
+<p>同業他社のPER、PBR、EV/EBITDA等のマルチプルと比較して割安・割高を判断する手法です。DCF法ほど精緻ではありませんが、直感的で実務でよく使われます。</p>
+
+<h2 id="sec10-3">10-3. 配当割引モデル（DDM）</h2>
+<div class="formula">
+ゴードン成長モデル: P = D<sub>1</sub> / (r − g)<br>
+<small>P=理論株価, D1=来期の予想配当, r=要求収益率, g=配当成長率</small>
+</div>
+<p>例: 来期配当100円、要求収益率8%、配当成長率3%の場合、理論株価 = 100 / (0.08-0.03) = <strong>2,000円</strong></p>
+
+<h2 id="sec10-4">10-4. グレアムの安全域（Margin of Safety）</h2>
+
+<blockquote>
+  「投資の極意を3つの言葉で表すなら、『安全域（Margin of Safety）』である」
+  <cite>-- ベンジャミン・グレアム『賢明なる投資家』</cite>
+</blockquote>
+
+<p>グレアムは、理論的な企業価値よりも十分に安い価格で購入することの重要性を説きました。具体的なスクリーニング基準：PER 15倍以下、PBR 1.5倍以下、<strong>PER × PBR &lt; 22.5</strong>。さらに厳格な「ネットネット株」は、流動資産から全負債を引いた金額（正味流動資産）が時価総額を上回る企業を指します。</p>
+
+<div class="quiz" id="quiz-ch10">
+  <h4>第8〜10章 理解度チェック</h4>
+  <div class="quiz-q">Q1. デュポン分解でROEを構成する3要素は？</div>
+  <div class="quiz-options">
+    <label><input type="radio" name="q-ch10" value="a" data-correct="true">純利益率 × 総資産回転率 × 財務レバレッジ</label>
+    <label><input type="radio" name="q-ch10" value="b">PER × PBR × 配当性向</label>
+    <label><input type="radio" name="q-ch10" value="c">売上成長率 × 営業利益率 × 自己資本比率</label>
+  </div>
+  <button class="calc-btn" onclick="checkQuiz('quiz-ch10')">回答する</button>
+  <div class="quiz-feedback correct">正解！ ROE = 純利益率 × 総資産回転率 × 財務レバレッジ です。</div>
+  <div class="quiz-feedback wrong">不正解。ROE = (純利益/売上) × (売上/総資産) × (総資産/自己資本) です。</div>
+</div>
+
+<div class="vol-nav">
+  <a href="../vol02/index.html">← 第2巻: 日本の投資制度</a>
+  <a href="../index.html">目次に戻る</a>
+  <a href="../vol04/index.html">第4巻: テクニカル分析 →</a>
+</div>
+</div>
+<footer class="book-footer">投資の教科書 &copy; 2025</footer>
+</div></div>
+<script src="../js/main.js"></script>
+</body>
+</html>

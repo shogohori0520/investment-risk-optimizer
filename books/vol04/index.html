@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第4巻: テクニカル分析 -- 投資の教科書</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>:root { --vol-color: #5b2c83; }</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="sidebar">
+  <div class="sidebar-header"><div class="vol-badge">第4巻</div><br>テクニカル分析</div>
+  <ul class="sidebar-nav">
+    <li class="chapter"><a href="#ch11">第11章: テクニカル分析の基礎</a></li>
+    <li><a href="#sec11-1">11-1. ダウ理論</a></li>
+    <li><a href="#sec11-2">11-2. ローソク足</a></li>
+    <li><a href="#sec11-3">11-3. チャートパターン</a></li>
+    <li class="chapter"><a href="#ch12">第12章: テクニカル指標</a></li>
+    <li><a href="#sec12-1">12-1. 移動平均線</a></li>
+    <li><a href="#sec12-2">12-2. RSI</a></li>
+    <li><a href="#sec12-3">12-3. MACD</a></li>
+    <li><a href="#sec12-4">12-4. ボリンジャーバンド</a></li>
+    <li><a href="#sec12-5">12-5. 出来高分析</a></li>
+    <li><a href="#sec12-6">12-6. その他の指標</a></li>
+  </ul>
+</nav>
+<div class="main-content">
+<header class="top-header">
+  <button class="btn-icon menu-toggle" onclick="toggleSidebar()">☰</button>
+  <span class="vol-title">第4巻: テクニカル分析</span>
+  <div class="header-actions">
+    <button class="btn-icon" onclick="changeFontSize(-1)">A-</button>
+    <button class="btn-icon" onclick="changeFontSize(1)">A+</button>
+    <button class="btn-icon" onclick="toggleTheme()">🌓</button>
+  </div>
+</header>
+<div class="chapter-progress"><div class="bar"></div></div>
+<div class="content-area">
+
+<h1 id="ch11">第11章: テクニカル分析の基礎</h1>
+
+<h2 id="sec11-1">11-1. ダウ理論の3つの基本前提</h2>
+
+<p>テクニカル分析の理論的基盤は、19世紀末にチャールズ・ダウが提唱した「ダウ理論」に遡ります。以下の3つの前提に基づいています。</p>
+
+<ol>
+  <li><strong>市場はすべてを織り込む</strong>: 企業業績、経済状況、政治情勢など、あらゆる情報が既に株価に反映されている。したがって、株価チャートを分析すれば十分な情報が得られる</li>
+  <li><strong>価格はトレンドに従って動く</strong>: 上昇トレンド（高値・安値が切り上がる）と下降トレンド（高値・安値が切り下がる）が存在し、トレンドは明確な反転シグナルが出るまで継続する</li>
+  <li><strong>歴史は繰り返す</strong>: 市場参加者の心理パターンは時代を超えて共通するため、過去に見られたチャートパターンは将来も繰り返される</li>
+</ol>
+
+<h2 id="sec11-2">11-2. ローソク足チャート</h2>
+
+<p>ローソク足は<strong>日本発祥</strong>のチャート表記法です。18世紀、大阪・堂島の米先物取引で本間宗久が考案したとされ、現在では世界中のトレーダーが使用しています。1本のローソク足は<strong>始値・終値・高値・安値</strong>の4つの価格情報を含みます。</p>
+
+<p>終値が始値より高い場合は<strong>陽線</strong>（白または赤で表示）、低い場合は<strong>陰線</strong>（黒または青で表示）となります。実体（始値と終値の間の太い部分）が長いほど、その期間の値動きの勢いが強いことを示します。</p>
+
+<h3>基本パターン</h3>
+<div class="table-wrap">
+<table>
+  <tr><th>パターン</th><th>形状</th><th>意味</th></tr>
+  <tr><td>大陽線</td><td>実体が長い陽線</td><td>強い買い圧力、上昇の勢い</td></tr>
+  <tr><td>大陰線</td><td>実体が長い陰線</td><td>強い売り圧力、下落の勢い</td></tr>
+  <tr><td>コマ</td><td>実体が小さく上下にヒゲ</td><td>買いと売りが拮抗、方向感なし</td></tr>
+  <tr><td>十字線（寄引同事線）</td><td>始値=終値、十字形</td><td>トレンド転換の可能性</td></tr>
+  <tr><td>トンカチ（ハンマー）</td><td>下ヒゲが長く実体が小さい</td><td>下落トレンドの底で出ると反転シグナル</td></tr>
+  <tr><td>カラカサ</td><td>上ヒゲが長く実体が小さい</td><td>上昇トレンドの天井で出ると反転シグナル</td></tr>
+</table>
+</div>
+
+<h3>複合パターン</h3>
+<ul>
+  <li><strong>はらみ線（Inside Bar）</strong>: 前日のローソク足の範囲内に当日のローソク足が収まるパターン。ボラティリティの縮小を示し、次の大きな動きの前兆</li>
+  <li><strong>つつみ線（Engulfing）</strong>: 前日のローソク足を完全に包み込む大きなローソク足。強い反転シグナル</li>
+  <li><strong>明けの明星（Morning Star）</strong>: 大陰線→コマ（十字線）→大陽線の3本で構成。下落トレンドの底での買いシグナル</li>
+  <li><strong>宵の明星（Evening Star）</strong>: 大陽線→コマ→大陰線。上昇トレンドの天井での売りシグナル</li>
+  <li><strong>赤三兵/黒三兵</strong>: 陽線（陰線）が3本連続で並ぶパターン。トレンドの勢いの強さを示す</li>
+</ul>
+
+<h2 id="sec11-3">11-3. トレンドとチャートパターン</h2>
+
+<h3>反転パターン</h3>
+<ul>
+  <li><strong>ヘッドアンドショルダーズ（三尊天井）</strong>: 3つの山を形成し、中央の山（ヘッド）が最も高い。ネックライン（2つの谷を結ぶ線）を下に抜けると下落シグナル。テクニカル分析で最も信頼性が高いとされるパターン</li>
+  <li><strong>逆三尊（逆ヘッドアンドショルダーズ）</strong>: 三尊天井の逆パターン。底値圏で出現すると上昇転換シグナル</li>
+  <li><strong>ダブルトップ/ダブルボトム</strong>: 同じ価格帯で2回天井（底）をつけるパターン</li>
+</ul>
+
+<h3>継続パターン</h3>
+<ul>
+  <li><strong>フラッグ</strong>: トレンド中の短い調整。旗のような平行四辺形を形成</li>
+  <li><strong>ペナント</strong>: 三角形に収束する調整パターン</li>
+  <li><strong>三角持ち合い</strong>: 高値が切り下がり安値が切り上がる収束パターン。ブレイクアウトの方向に大きく動くことが多い</li>
+</ul>
+
+<h1 id="ch12">第12章: テクニカル指標</h1>
+
+<h2 id="sec12-1">12-1. 移動平均線（Moving Average）</h2>
+
+<p>移動平均線は最も基本的なテクニカル指標で、一定期間の終値の平均をプロットしたものです。<strong>SMA（単純移動平均）</strong>は全期間を等しく平均し、<strong>EMA（指数平滑移動平均）</strong>は直近のデータにより大きな重みを付けます。</p>
+
+<p>日本株でよく使われる期間: <strong>5日</strong>（1週間）、<strong>25日</strong>（1ヶ月）、<strong>75日</strong>（3ヶ月）、<strong>200日</strong>（約1年）。短期の移動平均が長期の移動平均を下から上に突き抜けることを<strong>ゴールデンクロス</strong>（買いシグナル）、上から下に突き抜けることを<strong>デッドクロス</strong>（売りシグナル）と呼びます。</p>
+
+<div class="box box-info">
+  <div class="box-title">グランビルの法則</div>
+  <p>移動平均線と株価の位置関係から導かれる8つの売買シグナル（買い4つ、売り4つ）。最も重要なのは: ①移動平均線が上向きの時に株価が移動平均線を上抜け＝買い、②移動平均線が下向きの時に株価が移動平均線を下抜け＝売り。</p>
+</div>
+
+<h2 id="sec12-2">12-2. RSI（相対力指数）</h2>
+
+<div class="formula">
+RSI = 100 − 100 / (1 + RS)<br>
+RS = 一定期間の平均上昇幅 ÷ 一定期間の平均下落幅<br>
+<small>一般的に14日間を使用</small>
+</div>
+
+<p>RSIは0〜100の範囲で推移し、<strong>70以上で「買われすぎ」</strong>、<strong>30以下で「売られすぎ」</strong>と判断します。ただし、強いトレンド中はRSIが70以上（30以下）に張り付くことがあるため、逆張りシグナルとしてのみ使うのは危険です。</p>
+
+<p><strong>ダイバージェンス</strong>: 株価が新高値をつけているのにRSIが前回高値を超えられない場合、上昇の勢いが弱まっている兆候であり、反転の可能性を示唆します。</p>
+
+<h2 id="sec12-3">12-3. MACD（移動平均収束拡散法）</h2>
+
+<div class="formula">
+MACDライン = 短期EMA(12日) − 長期EMA(26日)<br>
+シグナルライン = MACDラインの9日EMA<br>
+ヒストグラム = MACDライン − シグナルライン
+</div>
+
+<p>MACDラインがシグナルラインを上抜けると買いシグナル、下抜けると売りシグナルです。ヒストグラムはトレンドの勢いを視覚化したもので、ゼロラインを超えるとトレンドの方向が変化したことを示します。</p>
+
+<h2 id="sec12-4">12-4. ボリンジャーバンド</h2>
+
+<div class="formula">
+上限バンド = SMA + k × σ<br>
+下限バンド = SMA − k × σ<br>
+<small>k=2（標準）, σ=標準偏差, 一般的に20日SMA</small>
+</div>
+
+<p>統計的に、株価が±1σ内に収まる確率は<strong>68.3%</strong>、±2σ内は<strong>95.4%</strong>、±3σ内は<strong>99.7%</strong>です。バンド幅が狭まる<strong>スクイーズ</strong>はボラティリティが低下していることを示し、その後バンドが急拡大する<strong>エクスパンション</strong>で大きなトレンドが発生することが多いです。</p>
+
+<h2 id="sec12-5">12-5. 出来高分析</h2>
+
+<p>「<strong>出来高は株価に先行する</strong>」という格言があります。株価上昇時に出来高も増加していれば上昇トレンドは健全、出来高が減少しながら上昇している場合はトレンドの終わりが近い可能性があります。<strong>OBV（On Balance Volume）</strong>は、上昇日の出来高を加算し下落日の出来高を減算する累積指標で、資金の流入・流出を視覚化します。</p>
+
+<h2 id="sec12-6">12-6. その他の重要な指標</h2>
+
+<h3>一目均衡表</h3>
+<p>日本人の一目山人（ペンネーム）が開発した、<strong>日本発祥の総合的テクニカル分析手法</strong>。転換線、基準線、先行スパン1・2（「雲」を形成）、遅行スパンの5つの線で構成されます。「三役好転」（転換線＞基準線、株価＞雲、遅行スパン＞株価）が揃うと強い買いシグナルとされます。</p>
+
+<h3>フィボナッチ・リトレースメント</h3>
+<p>フィボナッチ数列に基づく比率（<strong>23.6%、38.2%、50%、61.8%、78.6%</strong>）を使い、トレンドの押し目（戻り）の目安を推定します。38.2%と61.8%が特に重視されます。</p>
+
+<h3>エリオット波動</h3>
+<p>相場は5つの推進波（上昇1-2-3-4-5）と3つの修正波（下落A-B-C）の計8波で1サイクルを形成するという理論。実践的に使うのは難しいですが、相場の「位置」を把握する概念フレームワークとして有用です。</p>
+
+<div class="box box-warning">
+  <div class="box-title">テクニカル分析の限界</div>
+  <p>テクニカル分析は万能ではありません。「自己成就予言」の側面もあり（多くの人が同じシグナルを見て同じ行動を取る）、重大なファンダメンタルズの変化（決算発表、経済ショック等）の前ではテクニカルシグナルは機能しないことがあります。ファンダメンタル分析と組み合わせて使うことが推奨されます。</p>
+</div>
+
+<div class="quiz" id="quiz-ch12">
+  <h4>第11〜12章 理解度チェック</h4>
+  <div class="quiz-q">Q1. RSIが30以下の場合、一般的にどのような状態とされますか？</div>
+  <div class="quiz-options">
+    <label><input type="radio" name="q-ch12" value="a">買われすぎ</label>
+    <label><input type="radio" name="q-ch12" value="b" data-correct="true">売られすぎ</label>
+    <label><input type="radio" name="q-ch12" value="c">トレンドなし</label>
+  </div>
+  <button class="calc-btn" onclick="checkQuiz('quiz-ch12')">回答する</button>
+  <div class="quiz-feedback correct">正解！ RSI 30以下は売られすぎを示唆します。</div>
+  <div class="quiz-feedback wrong">不正解。RSI 70以上が買われすぎ、30以下が売られすぎです。</div>
+</div>
+
+<div class="vol-nav">
+  <a href="../vol03/index.html">← 第3巻: ファンダメンタル分析</a>
+  <a href="../index.html">目次に戻る</a>
+  <a href="../vol05/index.html">第5巻: ポートフォリオ理論 →</a>
+</div>
+</div>
+<footer class="book-footer">投資の教科書 &copy; 2025</footer>
+</div></div>
+<script src="../js/main.js"></script>
+</body>
+</html>

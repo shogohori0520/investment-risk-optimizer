@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>付録D: チェックリスト集 -- 投資の教科書</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>:root { --vol-color: #2563eb; } .checklist{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:1.5rem 0;} .checklist h3{color:var(--vol-color);margin-bottom:1rem;} .checklist label{display:block;padding:0.5rem 0.3rem;font-size:0.95rem;cursor:pointer;border-bottom:1px solid var(--border);transition:background 0.2s;} .checklist label:last-child{border-bottom:none;} .checklist label:hover{background:var(--accent-light);} .checklist input[type=checkbox]{margin-right:0.8rem;transform:scale(1.3);vertical-align:middle;}</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="sidebar">
+  <div class="sidebar-header"><div class="vol-badge">付録D</div><br>チェックリスト集</div>
+  <ul class="sidebar-nav">
+    <li class="chapter"><a href="#cl1">口座開設</a></li>
+    <li class="chapter"><a href="#cl2">投資信託選定</a></li>
+    <li class="chapter"><a href="#cl3">個別株分析</a></li>
+    <li class="chapter"><a href="#cl4">年末投資タスク</a></li>
+  </ul>
+</nav>
+<div class="main-content">
+<header class="top-header">
+  <button class="btn-icon menu-toggle" onclick="toggleSidebar()">☰</button>
+  <span class="vol-title">付録D: チェックリスト集</span>
+  <div class="header-actions"><button class="btn-icon" onclick="changeFontSize(-1)">A-</button><button class="btn-icon" onclick="changeFontSize(1)">A+</button><button class="btn-icon" onclick="toggleTheme()">🌓</button></div>
+</header>
+<div class="chapter-progress"><div class="bar"></div></div>
+<div class="content-area">
+
+<p>各チェックリストは印刷して使うこともできます。ブラウザの印刷機能をご利用ください。</p>
+
+<div class="checklist" id="cl1">
+  <h3>1. 証券口座開設チェックリスト</h3>
+  <label><input type="checkbox"> 投資の目的と目標金額を決めた</label>
+  <label><input type="checkbox"> 緊急資金（生活費3〜6ヶ月分）を確保した</label>
+  <label><input type="checkbox"> 証券会社を比較し、選定した（SBI証券/楽天証券等）</label>
+  <label><input type="checkbox"> マイナンバーカード（または通知カード+本人確認書類）を準備した</label>
+  <label><input type="checkbox"> NISA口座の開設を申し込んだ</label>
+  <label><input type="checkbox"> 特定口座（源泉徴収あり）を選択した</label>
+  <label><input type="checkbox"> ログインID・パスワードを安全に保管した</label>
+  <label><input type="checkbox"> 入金方法（銀行振込/即時入金）を設定した</label>
+  <label><input type="checkbox"> クレジットカード積立の設定を検討した</label>
+  <label><input type="checkbox"> iDeCo口座の開設も検討した（別途申込が必要）</label>
+</div>
+
+<div class="checklist" id="cl2">
+  <h3>2. 投資信託選定チェックリスト</h3>
+  <label><input type="checkbox"> 投資対象（全世界/先進国/米国/日本等）を決めた</label>
+  <label><input type="checkbox"> インデックスファンドを優先的に検討した</label>
+  <label><input type="checkbox"> 信託報酬が0.2%以下であることを確認した</label>
+  <label><input type="checkbox"> 純資産総額が100億円以上（安定運用の目安）か確認した</label>
+  <label><input type="checkbox"> 購入時手数料が無料（ノーロード）であることを確認した</label>
+  <label><input type="checkbox"> 分配金が再投資型であることを確認した（複利効果のため）</label>
+  <label><input type="checkbox"> つみたてNISA対象商品であるか確認した</label>
+  <label><input type="checkbox"> 過去のトラッキングエラー（指数との乖離）が小さいか確認した</label>
+</div>
+
+<div class="checklist" id="cl3">
+  <h3>3. 個別株分析チェックリスト</h3>
+  <label><input type="checkbox"> 事業内容を理解できているか（何で稼いでいるか）</label>
+  <label><input type="checkbox"> 売上と利益の推移（過去5年）を確認した</label>
+  <label><input type="checkbox"> 営業利益率は業界平均以上か</label>
+  <label><input type="checkbox"> ROEが8%以上か（伊藤レポート基準）</label>
+  <label><input type="checkbox"> PERが同業他社と比べて適正か</label>
+  <label><input type="checkbox"> PBRが1倍を超えているか（1倍未満の場合、理由を理解しているか）</label>
+  <label><input type="checkbox"> 自己資本比率が40%以上か</label>
+  <label><input type="checkbox"> 営業キャッシュフローがプラスか</label>
+  <label><input type="checkbox"> フリーキャッシュフローが安定的にプラスか</label>
+  <label><input type="checkbox"> 配当の持続可能性（配当性向60%以下）を確認した</label>
+  <label><input type="checkbox"> 有利子負債が過大でないか確認した</label>
+  <label><input type="checkbox"> 競合他社と比較して優位性（経済的堀）があるか</label>
+</div>
+
+<div class="checklist" id="cl4">
+  <h3>4. 年末投資タスクチェックリスト</h3>
+  <label><input type="checkbox"> 年間の投資損益を確認した</label>
+  <label><input type="checkbox"> 含み損のある銘柄の「損出し」を検討した（損益通算のため）</label>
+  <label><input type="checkbox"> NISA枠の残りを確認し、使い切るか検討した</label>
+  <label><input type="checkbox"> ポートフォリオの資産配分を確認し、リバランスを検討した</label>
+  <label><input type="checkbox"> 来年の投資方針・目標を設定した</label>
+  <label><input type="checkbox"> iDeCoの掛金変更が必要か確認した</label>
+  <label><input type="checkbox"> 確定申告が必要かどうか確認した（損失繰越、外国税額控除等）</label>
+  <label><input type="checkbox"> 12月の配当権利日を確認した（保有銘柄の権利確定日）</label>
+</div>
+
+<div class="vol-nav">
+  <a href="glossary.html">← 付録C: 用語集</a>
+  <a href="../index.html">目次に戻る</a>
+  <span></span>
+</div>
+</div>
+<footer class="book-footer">投資の教科書 &copy; 2025 -- シリーズ全巻をお読みいただきありがとうございます。</footer>
+</div></div>
+<script src="../js/main.js"></script>
+</body>
+</html>

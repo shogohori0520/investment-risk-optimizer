@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>付録A: 重要公式集 -- 投資の教科書</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>:root { --vol-color: #2563eb; }</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="sidebar">
+  <div class="sidebar-header"><div class="vol-badge">付録A</div><br>重要公式集</div>
+  <ul class="sidebar-nav">
+    <li class="chapter"><a href="#basic">基本公式</a></li>
+    <li class="chapter"><a href="#valuation">バリュエーション</a></li>
+    <li class="chapter"><a href="#risk">リスク・パフォーマンス</a></li>
+    <li class="chapter"><a href="#technical">テクニカル指標</a></li>
+  </ul>
+</nav>
+<div class="main-content">
+<header class="top-header">
+  <button class="btn-icon menu-toggle" onclick="toggleSidebar()">☰</button>
+  <span class="vol-title">付録A: 重要公式集</span>
+  <div class="header-actions"><button class="btn-icon" onclick="changeFontSize(-1)">A-</button><button class="btn-icon" onclick="changeFontSize(1)">A+</button><button class="btn-icon" onclick="toggleTheme()">🌓</button></div>
+</header>
+<div class="chapter-progress"><div class="bar"></div></div>
+<div class="content-area">
+
+<h1 id="basic">基本公式</h1>
+
+<h3>複利（将来価値）</h3>
+<div class="formula">FV = PV × (1 + r)<sup>n</sup></div>
+<p>PV=現在価値, r=年利, n=年数。例: 100万円, 5%, 10年 → 100万×1.05<sup>10</sup> = 162.9万円</p>
+
+<h3>年金終価（積立の将来価値）</h3>
+<div class="formula">FV = PMT × [(1 + r)<sup>n</sup> − 1] / r</div>
+<p>PMT=毎期の積立額。例: 月3万円, 年5%(月0.417%), 30年(360ヶ月) → 約2,497万円</p>
+
+<h3>年金現価</h3>
+<div class="formula">PV = PMT × [1 − (1 + r)<sup>−n</sup>] / r</div>
+
+<h3>72の法則</h3>
+<div class="formula">資産が2倍になる年数 ≒ 72 ÷ 利率(%)</div>
+
+<h1 id="valuation">バリュエーション公式</h1>
+
+<h3>PER / PBR / ROE</h3>
+<div class="formula">PER = 株価 / EPS　　PBR = 株価 / BPS　　ROE = 純利益 / 自己資本</div>
+
+<h3>デュポン分解</h3>
+<div class="formula">ROE = (純利益/売上) × (売上/総資産) × (総資産/自己資本)</div>
+
+<h3>CAPM</h3>
+<div class="formula">E(R<sub>i</sub>) = R<sub>f</sub> + β × [E(R<sub>m</sub>) − R<sub>f</sub>]</div>
+
+<h3>WACC</h3>
+<div class="formula">WACC = E/(E+D) × R<sub>e</sub> + D/(E+D) × R<sub>d</sub> × (1−T)</div>
+
+<h3>DCF（企業価値）</h3>
+<div class="formula">V = Σ FCF<sub>t</sub> / (1+WACC)<sup>t</sup> + TV / (1+WACC)<sup>n</sup></div>
+
+<h3>ゴードン成長モデル</h3>
+<div class="formula">P = D<sub>1</sub> / (r − g)</div>
+<p>D1=来期配当, r=要求収益率, g=配当成長率。例: D1=100円, r=8%, g=3% → P=2,000円</p>
+
+<h1 id="risk">リスク・パフォーマンス公式</h1>
+
+<h3>シャープレシオ</h3>
+<div class="formula">SR = (R<sub>p</sub> − R<sub>f</sub>) / σ<sub>p</sub></div>
+
+<h3>ソルティノレシオ</h3>
+<div class="formula">SoR = (R<sub>p</sub> − R<sub>f</sub>) / σ<sub>downside</sub></div>
+
+<h3>VaR（パラメトリック法）</h3>
+<div class="formula">VaR = μ − z × σ</div>
+<p>z=信頼水準に対応するz値（95%→1.645, 99%→2.326）</p>
+
+<h3>ポートフォリオ分散（2資産）</h3>
+<div class="formula">σ<sub>p</sub>² = w<sub>1</sub>²σ<sub>1</sub>² + w<sub>2</sub>²σ<sub>2</sub>² + 2w<sub>1</sub>w<sub>2</sub>σ<sub>1</sub>σ<sub>2</sub>ρ<sub>12</sub></div>
+
+<h1 id="technical">テクニカル指標公式</h1>
+
+<h3>RSI</h3>
+<div class="formula">RSI = 100 − 100 / (1 + RS)　　RS = 平均上昇幅 / 平均下落幅</div>
+
+<h3>ボリンジャーバンド</h3>
+<div class="formula">上限 = SMA + k × σ　　下限 = SMA − k × σ</div>
+
+<h3>MACD</h3>
+<div class="formula">MACD = EMA(12) − EMA(26)　　Signal = EMA(9) of MACD</div>
+
+<div class="vol-nav">
+  <a href="../vol10/index.html">← 第10巻</a>
+  <a href="../index.html">目次に戻る</a>
+  <a href="calendar.html">付録B: 経済カレンダー →</a>
+</div>
+</div>
+<footer class="book-footer">投資の教科書 &copy; 2025</footer>
+</div></div>
+<script src="../js/main.js"></script>
+</body>
+</html>

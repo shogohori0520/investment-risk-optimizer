@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第5巻: ポートフォリオ理論とリスク管理 -- 投資の教科書</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>:root { --vol-color: #8b6914; }</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="sidebar">
+  <div class="sidebar-header"><div class="vol-badge">第5巻</div><br>ポートフォリオ理論とリスク管理</div>
+  <ul class="sidebar-nav">
+    <li class="chapter"><a href="#ch13">第13章: リスクとリターン</a></li>
+    <li><a href="#sec13-1">13-1. リスクの定義</a></li><li><a href="#sec13-2">13-2. 歴史的データ</a></li><li><a href="#sec13-3">13-3. 相関と分散</a></li>
+    <li class="chapter"><a href="#ch14">第14章: MPT</a></li>
+    <li><a href="#sec14-1">14-1. マーコウィッツ</a></li><li><a href="#sec14-2">14-2. 効率的フロンティア</a></li><li><a href="#sec14-3">14-3. CML</a></li><li><a href="#sec14-4">14-4. CAPM</a></li>
+    <li class="chapter"><a href="#ch15">第15章: 評価指標</a></li>
+    <li><a href="#sec15-1">15-1. シャープレシオ</a></li><li><a href="#sec15-2">15-2. ソルティノ</a></li><li><a href="#sec15-3">15-3. αとβ</a></li><li><a href="#sec15-4">15-4. 最大DD</a></li>
+    <li class="chapter"><a href="#ch16">第16章: リスク管理</a></li>
+    <li><a href="#sec16-1">16-1. VaR</a></li><li><a href="#sec16-2">16-2. CVaR</a></li><li><a href="#sec16-3">16-3. リスクパリティ</a></li><li><a href="#sec16-4">16-4. ファクター投資</a></li>
+  </ul>
+</nav>
+<div class="main-content">
+<header class="top-header">
+  <button class="btn-icon menu-toggle" onclick="toggleSidebar()">☰</button>
+  <span class="vol-title">第5巻: ポートフォリオ理論とリスク管理</span>
+  <div class="header-actions"><button class="btn-icon" onclick="changeFontSize(-1)">A-</button><button class="btn-icon" onclick="changeFontSize(1)">A+</button><button class="btn-icon" onclick="toggleTheme()">🌓</button></div>
+</header>
+<div class="chapter-progress"><div class="bar"></div></div>
+<div class="content-area">
+
+<h1 id="ch13">第13章: リスクとリターンの基礎</h1>
+
+<h2 id="sec13-1">13-1. リスクの定義と測定</h2>
+<p>金融の世界では、リスクとは「リターンのばらつき」を意味し、<span class="tooltip">標準偏差<span class="tooltip-text">データの散らばり具合を示す統計量。σ（シグマ）で表記。大きいほどリスクが高い</span></span>（σ）で測定されます。リスクには2種類あります。</p>
+<ul>
+  <li><strong>システマティックリスク（市場リスク）</strong>: 分散投資では除去できないリスク。景気変動、金利変動、インフレなど市場全体に影響するもの</li>
+  <li><strong>アンシステマティックリスク（個別リスク）</strong>: 分散投資で除去可能。企業固有のリスク。<strong>20〜30銘柄</strong>への分散でその大部分を排除できる</li>
+</ul>
+
+<h2 id="sec13-2">13-2. 歴史的データ（米国 1926〜2023年）</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>資産クラス</th><th>年率リターン</th><th>標準偏差（σ）</th></tr>
+  <tr><td>大型株</td><td>約10%</td><td>約20%</td></tr>
+  <tr><td>小型株</td><td>約12%</td><td>約30%</td></tr>
+  <tr><td>長期国債</td><td>約5.5%</td><td>約10%</td></tr>
+  <tr><td>短期国債</td><td>約3.3%</td><td>約3%</td></tr>
+</table>
+</div>
+<p>リスクとリターンには正の相関があり、より高いリターンを求めるには、より高いリスクを受け入れる必要があります。</p>
+
+<h2 id="sec13-3">13-3. 相関係数と分散投資</h2>
+<p>相関係数（ρ）は−1から+1の範囲で、2つの資産の値動きの関係を示します。ρ=+1なら完全に同じ方向に動き、ρ=−1なら完全に逆方向、ρ=0なら無関係です。</p>
+<div class="formula">
+2資産ポートフォリオの分散:<br>
+σ<sub>p</sub>² = w<sub>1</sub>²σ<sub>1</sub>² + w<sub>2</sub>²σ<sub>2</sub>² + 2w<sub>1</sub>w<sub>2</sub>σ<sub>1</sub>σ<sub>2</sub>ρ<sub>12</sub>
+</div>
+<p>相関が低い（またはマイナスの）資産を組み合わせることで、個々の資産よりもリスクを低くしつつリターンを維持できます。これが<strong>分散投資の数学的根拠</strong>です。</p>
+
+<h1 id="ch14">第14章: マーコウィッツの平均分散最適化</h1>
+
+<h2 id="sec14-1">14-1. ハリー・マーコウィッツ</h2>
+<p>1952年に発表された論文「Portfolio Selection」で<span class="tooltip">現代ポートフォリオ理論（MPT）<span class="tooltip-text">Modern Portfolio Theory。リスクとリターンの定量的分析に基づくポートフォリオ構築理論</span></span>の基礎を確立し、1990年にノーベル経済学賞を受賞しました。</p>
+
+<h2 id="sec14-2">14-2. 効率的フロンティア</h2>
+<p>あらゆる資産の組み合わせの中で、<strong>同じリスクで最大のリターン</strong>（または同じリターンで最小のリスク）を実現するポートフォリオの集合が<strong>効率的フロンティア</strong>です。投資家は効率的フロンティア上のポートフォリオのみを選択すべきです。曲線の最も左端が<strong>最小分散ポートフォリオ（MVP）</strong>です。</p>
+
+<h2 id="sec14-3">14-3. 資本市場線（CML）</h2>
+<div class="formula">E(R<sub>p</sub>) = R<sub>f</sub> + [(E(R<sub>m</sub>) − R<sub>f</sub>) / σ<sub>m</sub>] × σ<sub>p</sub></div>
+<p>無リスク資産（国債）と市場ポートフォリオを組み合わせることで、効率的フロンティアより上方に位置する直線（CML）が引けます。<strong>トービンの分離定理</strong>: すべての投資家は、リスク許容度に関わらず、同じ市場ポートフォリオを保有し、無リスク資産との配分比率だけを変えるべきである。</p>
+
+<h2 id="sec14-4">14-4. CAPM（資本資産価格モデル）</h2>
+<div class="formula">E(R<sub>i</sub>) = R<sub>f</sub> + β<sub>i</sub> × [E(R<sub>m</sub>) − R<sub>f</sub>]<br><small>β = Cov(R<sub>i</sub>, R<sub>m</sub>) / Var(R<sub>m</sub>)</small></div>
+<p>CAPMは個別資産の期待リターンを決定するモデルです。β（ベータ）が1なら市場と同じ動き、1より大きければ市場より変動が大きく、1未満なら変動が小さいことを意味します。CAPMは現実には多くの限界がありますが、リスクプレミアムと資本コストの概念的基盤として今も重要です。</p>
+
+<h1 id="ch15">第15章: パフォーマンス評価指標</h1>
+
+<h2 id="sec15-1">15-1. シャープレシオ</h2>
+<div class="formula">シャープレシオ = (R<sub>p</sub> − R<sub>f</sub>) / σ<sub>p</sub></div>
+<p>リスク1単位あたりの超過リターンを測る最も広く使われる指標。<strong>0.5以上で良好、1.0以上で優秀</strong>とされます。</p>
+
+<h2 id="sec15-2">15-2. ソルティノレシオ</h2>
+<div class="formula">ソルティノレシオ = (R<sub>p</sub> − R<sub>f</sub>) / σ<sub>downside</sub></div>
+<p>シャープレシオの改良版で、下方偏差（マイナスリターンのみ）をリスク指標とします。投資家にとって上方向の変動は「歓迎すべきリスク」であるという考えに基づきます。</p>
+
+<h2 id="sec15-3">15-3. アルファ（α）とベータ（β）</h2>
+<p><strong>ジェンセンのα</strong> = R<sub>p</sub> − [R<sub>f</sub> + β × (R<sub>m</sub> − R<sub>f</sub>)]。αがプラスならCAPMが予測するリターンを超えた「超過収益」を生み出しています。</p>
+
+<h2 id="sec15-4">15-4. 最大ドローダウン</h2>
+<p>ピーク（最高値）からトラフ（最安値）までの最大の下落幅。歴史的な最大ドローダウン: <strong>リーマンショック</strong>（2008年）S&amp;P500 −56.8%、日経平均 −61%。<strong>コロナショック</strong>（2020年）S&amp;P500 −33.9%。</p>
+
+<h1 id="ch16">第16章: リスク管理の実践</h1>
+
+<h2 id="sec16-1">16-1. VaR（バリュー・アット・リスク）</h2>
+<p>「一定の確率で、一定期間内に、最大いくらの損失が発生しうるか」を示す指標。3つの算出方法：</p>
+<ul>
+  <li><strong>分散共分散法</strong>（パラメトリック法）: 正規分布を仮定。VaR = μ − z × σ</li>
+  <li><strong>ヒストリカル法</strong>: 過去データの分位点をそのまま使用。分布の仮定不要</li>
+  <li><strong>モンテカルロ法</strong>: 乱数シミュレーションで多数のシナリオを生成</li>
+</ul>
+<div class="box box-warning">
+  <div class="box-title">VaRの限界</div>
+  <p>VaRは「VaRを超える損失がどれだけ大きいか」を教えてくれません（テールリスクの過小評価）。2008年の金融危機では、多くの金融機関のVaRモデルが実際の損失を大幅に過小評価しました。</p>
+</div>
+
+<h2 id="sec16-2">16-2. CVaR（期待ショートフォール）</h2>
+<p>VaRを超える損失が発生した場合の<strong>平均的な損失額</strong>。VaRの限界を補完する指標で、バーゼルIII（銀行の自己資本規制）ではVaRからCVaRへの移行が進んでいます。</p>
+
+<h2 id="sec16-3">16-3. リスクパリティ戦略</h2>
+<p>各資産の<strong>リスク寄与（Risk Contribution）を均等化</strong>する配分戦略。レイ・ダリオのブリッジウォーター社「オールウェザー」戦略で有名になりました。従来の60/40ポートフォリオ（株式60%/債券40%）では、リスクの大部分が株式に集中しますが、リスクパリティは各資産がポートフォリオ全体のリスクに等しく貢献するよう配分します。</p>
+
+<h2 id="sec16-4">16-4. ファクター投資</h2>
+<p>ファーマ＝フレンチの研究に基づくリスクファクター：</p>
+<div class="table-wrap">
+<table>
+  <tr><th>ファクター</th><th>内容</th><th>プレミアムの源泉</th></tr>
+  <tr><td>市場（MKT）</td><td>株式市場全体のリスクプレミアム</td><td>株式のリスクを取ることへの報酬</td></tr>
+  <tr><td>サイズ（SMB）</td><td>小型株 − 大型株</td><td>小型株は流動性リスクが高い</td></tr>
+  <tr><td>バリュー（HML）</td><td>割安株 − 割高株</td><td>割安株は財務リスクが高い傾向</td></tr>
+  <tr><td>収益性（RMW）</td><td>高収益 − 低収益</td><td>高品質企業のプレミアム</td></tr>
+  <tr><td>投資（CMA）</td><td>保守的投資 − 積極的投資</td><td>過剰投資のリスク回避</td></tr>
+  <tr><td>モメンタム</td><td>直近の上昇銘柄 − 下落銘柄</td><td>行動バイアスの活用</td></tr>
+</table>
+</div>
+
+<div class="quiz" id="quiz-ch16">
+  <h4>第13〜16章 理解度チェック</h4>
+  <div class="quiz-q">Q1. シャープレシオが1.0以上の場合、一般的にどう評価されますか？</div>
+  <div class="quiz-options">
+    <label><input type="radio" name="q-ch16" value="a">不十分</label>
+    <label><input type="radio" name="q-ch16" value="b">良好</label>
+    <label><input type="radio" name="q-ch16" value="c" data-correct="true">優秀</label>
+  </div>
+  <button class="calc-btn" onclick="checkQuiz('quiz-ch16')">回答する</button>
+  <div class="quiz-feedback correct">正解！ 0.5以上で良好、1.0以上で優秀とされます。</div>
+  <div class="quiz-feedback wrong">不正解。シャープレシオ1.0以上は「優秀」と評価されます。</div>
+</div>
+
+<div class="vol-nav">
+  <a href="../vol04/index.html">← 第4巻: テクニカル分析</a>
+  <a href="../index.html">目次に戻る</a>
+  <a href="../vol06/index.html">第6巻: 投資戦略 →</a>
+</div>
+</div>
+<footer class="book-footer">投資の教科書 &copy; 2025</footer>
+</div></div>
+<script src="../js/main.js"></script>
+</body>
+</html>
